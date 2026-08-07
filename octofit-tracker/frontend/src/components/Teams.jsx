@@ -9,7 +9,7 @@ const Teams = () => {
   useEffect(() => {
     const loadTeams = async () => {
       try {
-        const data = await fetchJson('/teams/');
+        const data = await fetchJson('/api/teams/');
         setTeams(normalizeResponse(data));
       } catch (err) {
         setError(err.message ?? 'Failed to load teams');

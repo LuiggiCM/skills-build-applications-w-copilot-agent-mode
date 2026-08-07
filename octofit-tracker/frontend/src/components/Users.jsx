@@ -9,7 +9,7 @@ const Users = () => {
   useEffect(() => {
     const loadUsers = async () => {
       try {
-        const data = await fetchJson('/users/');
+        const data = await fetchJson('/api/users/');
         setUsers(normalizeResponse(data));
       } catch (err) {
         setError(err.message ?? 'Failed to load users');

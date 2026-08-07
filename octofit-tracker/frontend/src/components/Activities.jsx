@@ -9,7 +9,7 @@ const Activities = () => {
   useEffect(() => {
     const loadActivities = async () => {
       try {
-        const data = await fetchJson('/activities/');
+        const data = await fetchJson('/api/activities/');
         setActivities(normalizeResponse(data));
       } catch (err) {
         setError(err.message ?? 'Failed to load activities');
